@@ -1,0 +1,21 @@
+stages:
+  prepare_binary_labels:
+    cmd: python scripts/prepare_binary_labels.py --raw-dir data/raw/nih_chest_xray --output-dir data/processed
+    deps:
+      - scripts/prepare_binary_labels.py
+      - data/raw/nih_chest_xray/Data_Entry_2017.csv
+      - data/raw/nih_chest_xray/images_001
+      - data/raw/nih_chest_xray/images_002
+      - data/raw/nih_chest_xray/images_003
+      - data/raw/nih_chest_xray/images_004
+      - data/raw/nih_chest_xray/images_005
+      - data/raw/nih_chest_xray/images_006
+      - data/raw/nih_chest_xray/images_007
+      - data/raw/nih_chest_xray/images_008
+      - data/raw/nih_chest_xray/images_009
+      - data/raw/nih_chest_xray/images_010
+      - data/raw/nih_chest_xray/images_011
+      - data/raw/nih_chest_xray/images_012
+    outs:
+      - data/processed/binary_labels.csv
+      - data/processed/cleaning_report.json

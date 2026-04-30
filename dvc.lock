@@ -1,0 +1,83 @@
+schema: '2.0'
+stages:
+  prepare_binary_labels:
+    cmd: python scripts/prepare_binary_labels.py --raw-dir 
+      data/raw/nih_chest_xray --output-dir data/processed
+    deps:
+    - path: data/raw/nih_chest_xray/Data_Entry_2017.csv
+      hash: md5
+      md5: 2528009b0d96b19d4de60debedd8ded6
+      size: 7861152
+    - path: data/raw/nih_chest_xray/images_001
+      hash: md5
+      md5: 9258d1ef14c98388e0b5cfb3ccf17eb0.dir
+      size: 2007961024
+      nfiles: 4999
+    - path: data/raw/nih_chest_xray/images_002
+      hash: md5
+      md5: e59325811f27ccf05bbc7bd7246fb78e.dir
+      size: 3951069542
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_003
+      hash: md5
+      md5: f1d07785c1eb295bad68e5e43844c0ed.dir
+      size: 3928657321
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_004
+      hash: md5
+      md5: 0b95df686ef69183d40547944977f2be.dir
+      size: 3837267398
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_005
+      hash: md5
+      md5: 0607d4d317843184701d1238c9bc6440.dir
+      size: 3933273109
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_006
+      hash: md5
+      md5: 3c5efd9ebde8ae7d05912d9f3885a463.dir
+      size: 3983895279
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_007
+      hash: md5
+      md5: 0e465511665bc179a0f871aa22955f38.dir
+      size: 4014137889
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_008
+      hash: md5
+      md5: 03a3a262fd5a39de7450869809c9edc0.dir
+      size: 4015949603
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_009
+      hash: md5
+      md5: 5666ecf7f8cde285c59a2ea5e9398807.dir
+      size: 4108933524
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_010
+      hash: md5
+      md5: b44172d108ac9cac71bbbc5ac66c6ec1.dir
+      size: 4179144121
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_011
+      hash: md5
+      md5: 822d9527927712244ddf12db170e146e.dir
+      size: 4184608844
+      nfiles: 10000
+    - path: data/raw/nih_chest_xray/images_012
+      hash: md5
+      md5: aeaa02784a92e182aff0c52f0afe5faf.dir
+      size: 2912543044
+      nfiles: 7121
+    - path: scripts/prepare_binary_labels.py
+      hash: md5
+      md5: fde718a868aaa8af1002b147153ee766
+      size: 3938
+    outs:
+    - path: data/processed/binary_labels.csv
+      hash: md5
+      md5: ed100643c9039656f740113653caa91f
+      size: 10384037
+    - path: data/processed/cleaning_report.json
+      hash: md5
+      md5: 27be3d7555b6375d3e005fad1e6d850b
+      size: 208
