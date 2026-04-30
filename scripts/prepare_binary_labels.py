@@ -10,7 +10,7 @@ NO_FINDING = "No Finding"
 NORMAL_LABEL = "no_abnormality"
 ABNORMAL_LABEL = "abnormality"
 
-
+# Builds the absolut paths for each image
 def build_image_index(raw_dir: Path) -> dict[str, Path]:
     return {path.name: path for path in raw_dir.glob("images_*/images/*.png")}
 
@@ -36,6 +36,7 @@ def clean_labels(raw_dir: Path, output_dir: Path) -> None:
         "abnormal_rows": 0,
     }
 
+    # Loading the CSV
     with metadata_path.open("r", newline="", encoding="utf-8") as source:
         reader = csv.DictReader(source)
         required_columns = {"Image Index", "Finding Labels"}

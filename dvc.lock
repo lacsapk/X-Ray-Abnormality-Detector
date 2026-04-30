@@ -70,8 +70,8 @@ stages:
       nfiles: 7121
     - path: scripts/prepare_binary_labels.py
       hash: md5
-      md5: fde718a868aaa8af1002b147153ee766
-      size: 3938
+      md5: cd1c03e75c0927e4a1e661a0799e2f7f
+      size: 4001
     outs:
     - path: data/processed/binary_labels.csv
       hash: md5
