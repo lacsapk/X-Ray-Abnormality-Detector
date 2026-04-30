@@ -3,3 +3,4 @@
 /.venv_xray
 /.ipynb_checkpoints
 /notebooks/.ipynb_checkpoints
+mlops-*.json
