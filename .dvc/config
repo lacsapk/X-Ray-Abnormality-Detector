@@ -1,0 +1,5 @@
+[core]
+    site_cache_dir = .dvc/tmp/site-cache
+    remote = gcsremote
+['remote "gcsremote"']
+    url = gs://mlops_xray_data_group7
