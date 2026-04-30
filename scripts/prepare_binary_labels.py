@@ -10,6 +10,8 @@ NO_FINDING = "No Finding"
 NORMAL_LABEL = "no_abnormality"
 ABNORMAL_LABEL = "abnormality"
 
+# Changes the Labels to binary and also adds the full paths to each image, for easier access
+
 # Builds the absolut paths for each image
 def build_image_index(raw_dir: Path) -> dict[str, Path]:
     return {path.name: path for path in raw_dir.glob("images_*/images/*.png")}
