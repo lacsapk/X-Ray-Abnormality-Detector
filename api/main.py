@@ -43,7 +43,7 @@ transform = get_val_transform()
 # Step 4: FastAPI app
 app = FastAPI()
 
-# added Grad-CAM support to api/main.py (line 47): /predict now returns the usual prediction and probability, plus:
+# added Grad-CAM support to api/main.py: /predict now returns the usual prediction and probability, plus:
 # gradcam_overlay_png: base64 PNG overlay on the X-ray
 # gradcam_heatmap_png: base64 PNG heatmap
 
@@ -132,12 +132,3 @@ async def predict(file: UploadFile = File(...)):
         "gradcam_heatmap_png": image_to_base64_png(heatmap),
     }
 
-# local
-# uvicorn main:app --reload --host 0.0.0.0 --port 8000
-# http://127.0.0.1:8000/docs
-
-# with docker
-# docker build -f docker/Dockerfile.api -t xray-api .
-# docker run -p 8000:8000 xray-api
-
-# docker run -p 8000:8000 -v "${PWD}:/app" -e GOOGLE_APPLICATION_CREDENTIALS=/app/project-a5834adc-8f24-44e6-8f1-0647c19fa23b.json xray-api
