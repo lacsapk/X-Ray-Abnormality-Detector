@@ -26,3 +26,11 @@ stages:
     outs:
       - data/processed/binary_labels.csv
       - data/processed/cleaning_report.json
+
+  sync_vertex_data:
+    cmd: python scripts/sync_vertex_data.py --bucket nih-xray-data
+    deps:
+      - scripts/sync_vertex_data.py
+      - data/raw/nih_chest_xray
+      - data/processed/binary_labels.csv
+      - data/processed/cleaning_report.json
